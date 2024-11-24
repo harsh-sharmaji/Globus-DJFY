@@ -2,11 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#07091F] text-white py-16 border-t-2 border-t-transparent" style={{ borderImage: 'linear-gradient(to right, #FDDF09, #E82B34) 1' }}>
+    <footer className="bg-[#07091F] text-white py-16 font-montserrat font-medium border-t-2 border-t-transparent" style={{ borderImage: 'linear-gradient(to right, #FDDF09, #E82B34) 1' }}>
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Logo and Description Section */}
         <div className="md:col-span-4">
-          <img src="/logo.png" alt="DJFY" className="w-32 mb-6" />
+          <img src="assets/footerlogo.png" alt="DJFY" className="w-[150px] mb-6" />
           <p className="text-gray-300 mb-6">
             Connecting DJs and music enthusiasts for seamless event experiences and vibrant community engagement.
           </p>

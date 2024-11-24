@@ -6,7 +6,7 @@ const StarIcon = () => (
 
 const Testimonials = () => {
   return (
-    <div className="bg-[#0A1229] py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#0A1229] py-16 px-4 sm:px-6 font-montserrat font-medium lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         {/* Star Icon */}
         <div className="flex justify-center mb-4">
@@ -31,77 +31,72 @@ const Testimonials = () => {
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
 
-        {/* Testimonials Slider */}
-        <div className="relative">
-          <div className="flex overflow-hidden">
-            <div className="flex">
-              {/* Testimonial 1 */}
-              <div className="w-full flex-shrink-0 px-4">
-                <div className="relative max-w-lg mx-auto">
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <img
-                      src="https://img.freepik.com/free-photo/abstract-vaporwave-portrait-woman_23-2148950765.jpg?t=st=1732427095~exp=1732430695~hmac=85937ffa1390a5f6ed044bd67a8f6762805d8d13cef2d438324f67282b0da432&w=360"
-                      alt="Elessa Berg"
-                      className="object-cover w-full h-full"
-                    />
-                    <div className="absolute inset-0 bg-black/50"></div>
-                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
-                      <span className="text-6xl font-serif mb-6">"</span>
-                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
-                      <h3 className="text-xl font-bold mb-2">Elessa Berg</h3>
-                      <p className="text-sm text-gray-300">Manager @Club</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 2 */}
-              <div className="w-full flex-shrink-0 px-4">
-                <div className="relative max-w-lg mx-auto">
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <img
-                      src="/placeholder.svg?height=400&width=300"
-                      alt="Mark Jhon"
-                      className="object-cover w-full h-full"
-                    />
-                    <div className="absolute inset-0 bg-black/50"></div>
-                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
-                      <span className="text-6xl font-serif mb-6">"</span>
-                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
-                      <h3 className="text-xl font-bold mb-2">Mark Jhon</h3>
-                      <p className="text-sm text-gray-300">CEO @Pentagon</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Testimonial 3 */}
-              <div className="w-full flex-shrink-0 px-4">
-                <div className="relative max-w-lg mx-auto">
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <img
-                      src="/placeholder.svg?height=400&width=300"
-                      alt="Tom Kelvis"
-                      className="object-cover w-full h-full"
-                    />
-                    <div className="absolute inset-0 bg-black/50"></div>
-                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
-                      <span className="text-6xl font-serif mb-6">"</span>
-                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
-                      <h3 className="text-xl font-bold mb-2">Tom Kelvis</h3>
-                      <p className="text-sm text-gray-300">mg @tech</p>
-                    </div>
-                  </div>
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Testimonial 1 */}
+          <div className="w-full flex-shrink-0 px-4">
+            <div className="relative max-w-md mx-auto">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <img
+                  src="https://img.freepik.com/free-photo/abstract-vaporwave-portrait-woman_23-2148950765.jpg?t=st=1732427095~exp=1732430695~hmac=85937ffa1390a5f6ed044bd67a8f6762805d8d13cef2d438324f67282b0da432&w=360"
+                  alt="Elessa Berg"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                  <span className="text-6xl font-serif mb-6">"</span>
+                  <p className="text-lg mb-6">
+                    I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.
+                  </p>
+                  <h3 className="text-xl font-bold mb-2">Elessa Berg</h3>
+                  <p className="text-sm text-gray-300">Manager @Club</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            <button className="w-3 h-3 rounded-full bg-yellow-400" aria-label="Go to slide 1" />
-            <button className="w-3 h-3 rounded-full bg-gray-500" aria-label="Go to slide 2" />
-            <button className="w-3 h-3 rounded-full bg-gray-500" aria-label="Go to slide 3" />
+          {/* Testimonial 2 */}
+          <div className="w-full flex-shrink-0 px-4">
+            <div className="relative max-w-md mx-auto">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <img
+                  src="https://img.freepik.com/free-photo/vibrant-scene-with-dj-techno-party_23-2150551533.jpg?t=st=1732430527~exp=1732434127~hmac=0c018f3d0e25a8980d7ed2c22549f7ec72081e19c800b7224d73d832afea94fa&w=360"
+                  alt="Mark Jhon"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                  <span className="text-6xl font-serif mb-6">"</span>
+                  <p className="text-lg mb-6">
+                    I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.
+                  </p>
+                  <h3 className="text-xl font-bold mb-2">Mark Jhon</h3>
+                  <p className="text-sm text-gray-300">CEO @Pentagon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="w-full flex-shrink-0 px-4">
+            <div className="relative max-w-md mx-auto">
+              <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <img
+                  src="https://images.pexels.com/photos/7715464/pexels-photo-7715464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="Tom Kelvis"
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                  <span className="text-6xl font-serif mb-6">"</span>
+                  <p className="text-lg mb-6">
+                    I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.
+                  </p>
+                  <h3 className="text-xl font-bold mb-2">Tom Kelvis</h3>
+                  <p className="text-sm text-gray-300">Manager @Tech</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

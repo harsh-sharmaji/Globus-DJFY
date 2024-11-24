@@ -4,7 +4,7 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-white/10 last:border-b-0">
+    <div className="border-b  border-white/10 last:border-b-0">
       <button
         className="flex justify-between items-center w-full py-4 text-left text-white/90 hover:text-white transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
@@ -83,7 +83,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#07091F] text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#07091F] text-white font-montserrat font-medium py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-col items-center mb-12">
           <div className="rounded-full bg-red-500/10 p-3 mb-4">

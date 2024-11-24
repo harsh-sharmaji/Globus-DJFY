@@ -10,9 +10,9 @@ const UseCaseSection = ({ title, description, imageUrl, isReversed }) => (
       />
     </div>
     <div className="flex-1 flex flex-col justify-center">
-      <h3 className="text-[#ff5533] text-2xl font-bold mb-4">{title}</h3>
-      <p className="text-gray-300 mb-6">{description}</p>
-      <button className="bg-gradient-to-r from-[#ff5533] to-[#ff3333] text-white px-6 py-2 rounded-full w-fit hover:opacity-90 transition-opacity">
+      <h3 className="text-[#ff5533] text-2xl font-montserrat font-medium mb-4">{title}</h3>
+      <p className="text-gray-300 font-montserrat font-medium mb-6">{description}</p>
+      <button className="bg-gradient-to-r from-[#ff5533] to-[#ff3333] font-montserrat font-medium text-white px-6 py-2 rounded-full w-fit hover:opacity-90 transition-opacity">
         Register!
       </button>
     </div>
@@ -52,7 +52,7 @@ const UseCase = () => {
     <div className="min-h-screen bg-[#09173C] py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-montserrat font-medium ">
             <span className="text-white">USE </span>
             <span className="text-[#ff5533]">CASES</span>
           </h2>

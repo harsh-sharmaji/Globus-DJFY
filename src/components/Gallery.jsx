@@ -35,8 +35,8 @@ const Gallery = () => {
             </svg>
           </div>
         </div>
-        <h2 className="text-3xl font-bold text-red-500">GALLERY</h2>
-        <p className="text-gray-400 mt-2 text-sm">
+        <h2 className="text-3xl font-montserrat font-medium  text-red-500">GALLERY</h2>
+        <p className="text-gray-400 font-montserrat font-medium mt-2 text-sm">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
       </div>

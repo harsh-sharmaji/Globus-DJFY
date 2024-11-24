@@ -10,13 +10,13 @@ export default function WebApp() {
                 <line x1="12" y1="18" x2="12" y2="18" />
               </svg>
             </div>
-            <h1 className="text-3xl font-bold mb-2">WEB <span className="text-red-500">APPS</span></h1>
+            <h1 className="text-3xl font-montserrat font-medium  mb-2">WEB <span className="text-red-500">APPS</span></h1>
             <div className="flex justify-center mb-2">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-16" viewBox="0 0 100 20">
                 <rect x="0" y="8" width="100" height="4" fill="#ff4444" />
               </svg>
             </div>
-            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+            <p className="text-gray-400 text-sm max-w-2xl font-montserrat font-medium mx-auto">
               Scan the QR Code, Connect to the event and request your song. No need to Download or install any App
             </p>
           </div>

@@ -13,10 +13,11 @@ const EventCard = ({ date, name, location, imageUrl }) => (
 
 const DJSearchTool = () => {
   return (
-    <div className="min-h-screen bg-[#0a0b1a] py-20 px-4 bg-cover bg-center" style={{backgroundImage: "url('/assets/bg1.png')"}}>
+    <div className="usage-video relative bg-custom-bg1 bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-white">
+      <div className="absolute inset-0 bg-[#0A0D2C] bg-opacity-80"></div>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-8 shadow-lg">
-          <h1 className="text-4xl font-bold text-center text-white mb-8 tracking-wide font-['Divine_Razier']" style={{textShadow: '0 0 10px rgba(255,255,255,0.5)'}}>
+          <h1 className="text-4xl  text-center text-white mb-8 tracking-wide font-eater font-normal" style={{textShadow: '0 0 10px rgba(255,255,255,0.5)'}}>
             THE ULTIMATE DJ TOOL
           </h1>
           <div className="relative">
@@ -43,19 +44,19 @@ const DJSearchTool = () => {
               date="21 Jun 23"
               name="DJ Ocean & Thunder"
               location="Indira Nagar Bengaluru, India"
-              imageUrl="https://img.freepik.com/free-photo/medium-shot-musicians-playing-guitars_23-2149162992.jpg"
+              imageUrl="/assets/g4.png"
             />
             <EventCard
               date="22 Jun 23"
               name="DJ SLING"
               location="Koramangla Bengaluru, India"
-              imageUrl="https://i.ytimg.com/vi/3qIQyWbd0C8/sddefault.jpg"
+              imageUrl="/assets/g4.png"
             />
             <EventCard
               date="24 Jun 23"
               name="DJ Deep Bhamra"
               location="Padmavathi Bangalore, India"
-              imageUrl="https://img.freepik.com/premium-photo/dj-woman-having-fun-playing-music-club-party-generative-ai-image-aig30_31965-203884.jpg"
+              imageUrl="/assets/g4.png"
             />
           </div>
 

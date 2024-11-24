@@ -2,7 +2,7 @@ import React from 'react'
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="relative p-6 rounded-3xl bg-gradient-to-b from-[#ffffff10] to-[#ffffff00] border border-[#ffffff15]">
+    <div className="relative p-6 rounded-3xl bg-gradient-to-b from-[#1B378280] to-[#09173C33] border border-[#ffffff15]">
       <div className="absolute -top-6 left-6">
         <div className="p-4 rounded-full bg-[#ff5533] bg-opacity-90">
           {icon}
@@ -21,7 +21,7 @@ const Card = () => {
     <div className="min-h-screen bg-[#07091F] py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-montserrat font-medium ">
             <span className="text-white">HERE'S HOW </span>
             <span className="text-[#ff5533]">DJFY WORKS</span>
           </h2>
@@ -34,7 +34,7 @@ const Card = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid font-montserrat font-medium grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <FeatureCard
             icon={
               <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">

@@ -14,7 +14,7 @@ import WebApp from './components/WebApp'
 function App() {
   
   return (
-    <>
+    <div>
     <Header/>
     <Card/>
     <UseCases/>
@@ -26,7 +26,7 @@ function App() {
     <FAQ/>
     <Footer/>
 
-    </>
+    </div>
   )
 }
 
