@@ -1,5 +1,6 @@
 import './App.css'
 import Card from './components/Card'
+import DJSearchTool from './components/DJSearchTool'
 // import "./components/FAQ"
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
@@ -17,6 +18,7 @@ function App() {
     <Header/>
     <Card/>
     <UseCases/>
+    <DJSearchTool/>
     <WebApp/>
     <UsageVideo/>
     <Gallery/>

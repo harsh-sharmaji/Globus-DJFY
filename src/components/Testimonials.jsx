@@ -1,88 +1,111 @@
-import React from "react";
+const StarIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Elessa Berg",
-      position: "Manager @Club",
-      quote: "I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.",
-      image: "https://via.placeholder.com/150", // Replace with actual image
-    },
-    {
-      id: 2,
-      name: "Mark Jhon",
-      position: "CEO @Pentagon",
-      quote: "I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.",
-      image: "https://via.placeholder.com/150", // Replace with actual image
-    },
-    {
-      id: 3,
-      name: "Tom Kelvis",
-      position: "MD @Hexn",
-      quote: "I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.",
-      image: "https://via.placeholder.com/150", // Replace with actual image
-    },
-  ];
-
   return (
-    <section className="bg-[#09173C] text-white py-12">
-      {/* Section Title */}
-      <div className="text-center mb-8">
+    <div className="bg-[#0A1229] py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Star Icon */}
         <div className="flex justify-center mb-4">
-          <span className="bg-gray-700 p-3 rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-          </span>
+          <div className="bg-white/10 p-3 rounded-lg">
+            <StarIcon />
+          </div>
         </div>
-        <h2 className="text-3xl font-bold text-red-500">
-          CLIENT <span className="text-white">TESTIMONIALS</span>
-        </h2>
-        <p className="text-gray-300 mt-2">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        </p>
-      </div>
 
-      {/* Testimonial Cards */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-6">
-        {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="bg-gray-800 relative rounded-lg overflow-hidden shadow-lg w-80"
-          >
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="w-full h-40 object-cover opacity-40"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center px-6 text-center">
-              <p className="text-white text-sm italic">"{testimonial.quote}"</p>
-              <h3 className="text-lg font-bold mt-4">{testimonial.name}</h3>
-              <p className="text-sm text-yellow-400">{testimonial.position}</p>
+        {/* Heading */}
+        <h2 className="text-4xl font-bold mb-4">
+          <span className="text-white">CLIENT </span>
+          <span className="text-red-500">TESTIMONIALS</span>
+        </h2>
+
+        {/* Decorative Bar */}
+        <div className="flex justify-center mb-8">
+          <div className="w-24 h-1 bg-red-500"></div>
+        </div>
+
+        {/* Description */}
+        <p className="text-gray-300 max-w-3xl mx-auto mb-12">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+
+        {/* Testimonials Slider */}
+        <div className="relative">
+          <div className="flex overflow-hidden">
+            <div className="flex">
+              {/* Testimonial 1 */}
+              <div className="w-full flex-shrink-0 px-4">
+                <div className="relative max-w-lg mx-auto">
+                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                    <img
+                      src="https://img.freepik.com/free-photo/abstract-vaporwave-portrait-woman_23-2148950765.jpg?t=st=1732427095~exp=1732430695~hmac=85937ffa1390a5f6ed044bd67a8f6762805d8d13cef2d438324f67282b0da432&w=360"
+                      alt="Elessa Berg"
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                      <span className="text-6xl font-serif mb-6">"</span>
+                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
+                      <h3 className="text-xl font-bold mb-2">Elessa Berg</h3>
+                      <p className="text-sm text-gray-300">Manager @Club</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="w-full flex-shrink-0 px-4">
+                <div className="relative max-w-lg mx-auto">
+                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                    <img
+                      src="/placeholder.svg?height=400&width=300"
+                      alt="Mark Jhon"
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                      <span className="text-6xl font-serif mb-6">"</span>
+                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
+                      <h3 className="text-xl font-bold mb-2">Mark Jhon</h3>
+                      <p className="text-sm text-gray-300">CEO @Pentagon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="w-full flex-shrink-0 px-4">
+                <div className="relative max-w-lg mx-auto">
+                  <div className="relative h-[400px] rounded-lg overflow-hidden">
+                    <img
+                      src="/placeholder.svg?height=400&width=300"
+                      alt="Tom Kelvis"
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-black/50"></div>
+                    <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-8">
+                      <span className="text-6xl font-serif mb-6">"</span>
+                      <p className="text-lg mb-6">I am very happy the way you present your daily info. And also it helps me save time to pick right stock with success.</p>
+                      <h3 className="text-xl font-bold mb-2">Tom Kelvis</h3>
+                      <p className="text-sm text-gray-300">mg @tech</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Pagination Dots */}
-      <div className="flex justify-center mt-6">
-        <div className="h-2 w-2 bg-yellow-500 rounded-full mx-1"></div>
-        <div className="h-2 w-2 bg-gray-400 rounded-full mx-1"></div>
-        <div className="h-2 w-2 bg-gray-400 rounded-full mx-1"></div>
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            <button className="w-3 h-3 rounded-full bg-yellow-400" aria-label="Go to slide 1" />
+            <button className="w-3 h-3 rounded-full bg-gray-500" aria-label="Go to slide 2" />
+            <button className="w-3 h-3 rounded-full bg-gray-500" aria-label="Go to slide 3" />
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

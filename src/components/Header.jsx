@@ -83,7 +83,7 @@ const Header = () => {
               <div className="relative">
                 <div className="absolute right-0 top-0 w-96 h-64 rounded-lg overflow-hidden">
                   <img 
-                    src="../assets/bg2.png" 
+                    src="/assets/bg2.png" 
                     alt="Party scene" 
                     className=" bg-custom-bg2 w-full h-full object-cover"
                   />

@@ -1,77 +1,85 @@
-import React from 'react';
+import React from 'react'
 
-// Reusable Card Component
-const UseCaseCard = ({ title, description, image }) => {
-  return (
-    <div className="bg-[#09173C] text-white rounded-lg shadow-lg p-5 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-      <img
-        src={image}
+const UseCaseSection = ({ title, description, imageUrl, isReversed }) => (
+  <div className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 mb-16`}>
+    <div className="flex-1">
+      <img 
+        src={imageUrl} 
         alt={title}
-        className="w-full md:w-1/3 rounded-lg object-cover"
+        className="rounded-lg w-full h-[300px] object-cover"
       />
-      <div className="flex flex-col space-y-2">
-        <h3 className="text-xl font-bold text-orange-400">{title}</h3>
-        <p className="text-sm">{description}</p>
-        <button className="mt-2 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">
-          Register
-        </button>
-      </div>
     </div>
-  );
-};
+    <div className="flex-1 flex flex-col justify-center">
+      <h3 className="text-[#ff5533] text-2xl font-bold mb-4">{title}</h3>
+      <p className="text-gray-300 mb-6">{description}</p>
+      <button className="bg-gradient-to-r from-[#ff5533] to-[#ff3333] text-white px-6 py-2 rounded-full w-fit hover:opacity-90 transition-opacity">
+        Register!
+      </button>
+    </div>
+  </div>
+);
 
-// Main Component
-const UseCases = () => {
-  const useCases = [
+const UseCase = () => {
+  const cases = [
     {
-      title: 'BAR/CLUB/VENUE DJ',
-      description:
-        'In bars and clubs, our app empowers guests to influence the music and request their top songs. By scanning a QR code, they can interact seamlessly.',
-      image: 'https://via.placeholder.com/300x200',
+      title: "BAR/CLUB/VENUE DJ",
+      description: "In bars and clubs, our app empowers guests to influence the music and create an interactive atmosphere. Instead of shouting requests or songs from spotify or youtube library, while DJs curate a playlist that keeps the dance floor packed. It's a seamless experience that enhances the entertainment value.",
+      imageUrl: "https://images.pexels.com/photos/7715613/pexels-photo-7715613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
-      title: 'MUSICIANS / BANDS',
-      description:
-        'Musicians and bands use our app to connect with fans during live shows. By displaying a QR code, fans enjoy an interactive experience.',
-      image: 'https://via.placeholder.com/300x200',
+      title: "MUSICIANS / BANDS",
+      description: "Musicians and bands use our app to connect with fans during live shows. By displaying a QR code, they invite the audience to request songs, creating an interactive experience. Fans share requests, making each performance unique and engaging.",
+      imageUrl: "https://img.freepik.com/free-photo/woman-performing-live-music-local-event_23-2149188081.jpg"
     },
     {
-      title: 'WEDDING / PRIVATE EVENT',
-      description:
-        'Our song request app makes weddings magical by letting guests shape the playlist. Create unforgettable memories with music.',
-      image: 'https://via.placeholder.com/300x200',
+      title: "WEDDING / PRIVATE EVENT",
+      description: "Our song request app makes weddings magical by letting guests shape the playlist. With each song choice submitted through the QR code, guests become part of the celebration. The music flows from love songs, ballads to dance-floor anthems, every song becomes a part of the celebration, uniting guests in joy and love.",
+      imageUrl: "https://img.freepik.com/free-photo/nightlife-with-people-dancing-club_23-2149052667.jpg?t=st=1732425203~exp=1732428803~hmac=657af28e55c4ffbc47cfaebcdf9943a618154944db5a70f2a77f37c80b03203f&w=996"
     },
     {
-      title: 'KARAOKE EVENT',
-      description:
-        'At karaoke events, our app makes singing seamless and fun. Guests can choose their favorite songs and enjoy a lively atmosphere.',
-      image: 'https://via.placeholder.com/300x200',
+      title: "KARAOKE EVENT",
+      description: "At karaoke events with a DJ, our app makes singing seamless and fun. Guests scan the DJs QR code to access the event in the app and browse through thousands of songs to find their perfect performance, keeping the energy high and ensuring everyone gets their moment in the spotlight.",
+      imageUrl: "https://img.freepik.com/free-photo/medium-shot-people-performing-concert_23-2149162946.jpg"
     },
     {
-      title: 'STREET PERFORMER/ARTIST',
-      description:
-        'Street performers use our app and QR code system to interact with their audience, receive song requests, and gather feedback.',
-      image: 'https://via.placeholder.com/300x200',
-    },
+      title: "STREET PERFORMER/ARTIST",
+      description: "For street performers and artists, our app and QR code system enables a new level of personal and financial connection with their audience. Passersby can easily make song requests and show appreciation through digital tips.",
+      imageUrl: "https://img.freepik.com/free-photo/three-friends-enjoy-by-singing-acoustic-guitar-songs-rooftop_146671-14626.jpg"
+    }
   ];
 
   return (
-    <div className="bg-[#09173C] text-white py-10 px-5 md:px-20">
-      <h2 className="text-4xl font-bold text-center mb-8 text-white">
-        USE <span className="text-orange-400">CASES</span>
-      </h2>
-      <div className="flex flex-col space-y-10">
-        {useCases.map((useCase, index) => (
-          <UseCaseCard
-            key={index}
-            title={useCase.title}
-            description={useCase.description}
-            image={useCase.image}
-          />
-        ))}
+    <div className="min-h-screen bg-[#09173C] py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold">
+            <span className="text-white">USE </span>
+            <span className="text-[#ff5533]">CASES</span>
+          </h2>
+          <div className="flex justify-center mt-2">
+            <div className="flex gap-1">
+              {[...Array(10)].map((_, i) => (
+                <div key={i} className="w-1 h-1 rounded-full bg-[#ff5533]" />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-20">
+          {cases.map((useCase, index) => (
+            <UseCaseSection
+              key={index}
+              title={useCase.title}
+              description={useCase.description}
+              imageUrl={useCase.imageUrl}
+              isReversed={index % 2 !== 0}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default UseCases;
+export default UseCase;
+

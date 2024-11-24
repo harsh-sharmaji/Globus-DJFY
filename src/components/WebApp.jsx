@@ -24,7 +24,7 @@ export default function WebApp() {
           {/* Phone Mockups */}
           <div className="flex justify-center items-center gap-4 mb-8">
             {/* VR Movie Phone */}
-            <div className="w-48 h-[400px] bg-gradient-to-b from-purple-900 to-purple-600 rounded-3xl p-2 overflow-hidden">
+            <div className="w-48 h-[400px] bg-gradient-to-b from-purple-900 to-purple-600 rounded-3xl p-2 overflow-hidden opacity-95">
               <div className="h-full rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-4">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4" />
                 <h3 className="text-lg font-bold mb-2">Watch movies in Virtual Reality</h3>
@@ -34,7 +34,7 @@ export default function WebApp() {
             </div>
   
             {/* Movie Selection Phone */}
-            <div className="w-52 h-[420px] bg-gradient-to-b from-emerald-900 to-emerald-600 rounded-3xl p-2 z-10">
+            <div className="w-52 h-[420px] bg-gradient-to-b from-emerald-900 to-emerald-600 rounded-3xl p-2 z-10 ">
               <div className="h-full bg-black/90 rounded-2xl p-3">
                 <div className="space-y-3">
                   <h3 className="text-lg font-bold">What would you like to watch?</h3>
@@ -57,7 +57,7 @@ export default function WebApp() {
             </div>
   
             {/* Movie Details Phone */}
-            <div className="w-48 h-[400px] bg-gradient-to-b from-gray-900 to-gray-600 rounded-3xl p-2 overflow-hidden">
+            <div className="w-48 h-[400px] bg-gradient-to-b from-gray-900 to-gray-600 rounded-3xl p-2 overflow-hidden opacity-95">
               <div className="h-full bg-black/90 rounded-2xl p-3">
                 <div className="space-y-3">
                   <div className="aspect-video bg-gray-800 rounded-lg mb-2" />

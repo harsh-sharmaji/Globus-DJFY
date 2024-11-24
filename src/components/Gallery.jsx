@@ -2,14 +2,14 @@ import React from "react";
 
 const Gallery = () => {
   const images = [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
+    "https://c0.wallpaperflare.com/preview/356/780/918/adult-audience-band-celebration-thumbnail.jpg",
+    "https://cambridgemask.com/cdn/shop/articles/Air-Quality-at-Music-Festivals-Cambridge-Mask-Co-59820990_600x.jpg?v=1726783282",
+    "https://img.freepik.com/premium-photo/new-year-celebration-friends-bachelorette-party-birthday-concept-three-beautiful-woman-evening-dresses-dancing-club_380164-76715.jpg?w=360",
+    "https://media.licdn.com/dms/image/v2/D4D12AQEec3fDJhsIeg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689418294947?e=2147483647&v=beta&t=POoKwBojmcDSUd3Ct_Al3Z-wqzOa9m0vEA9b2I8DMwc",
+    "https://www.rajwadaevents.com/uploaded-files/celebrity-images/Bachelor-Party-Planner0611.jpg",
+    "https://c1.wallpaperflare.com/preview/273/451/810/entertainment-dj-stage-crowd.jpg",
+    "https://img.freepik.com/premium-photo/dj-player-audio-mixing-electronic-music-nightclub-party-created-with-generative-ai-technology_67092-4133.jpg",
+    "https://c4.wallpaperflare.com/wallpaper/562/719/645/bar-club-dance-dancing-wallpaper-preview.jpg",
   ];
 
   return (
@@ -42,7 +42,7 @@ const Gallery = () => {
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-screen-lg">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-screen-md">
         {images.map((image, index) => (
           <div
             key={index}
