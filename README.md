@@ -11,11 +11,6 @@ This project is a **UI clone** of the DJFY platform. It replicates the design an
 - 🖌️ **Modern Styling**: Utilizes Tailwind CSS for clean and consistent UI design.
 - ⚡ **Interactive Elements**: Components include animations and dynamic state management using React.
 
----
-
-## 🎥 Demo
-[View the deployed clone here](#)  
-(Add a link to the hosted UI clone project if available.)
 
 ---
 
