@@ -111,13 +111,13 @@ const Navigation = () => {
           {/* Mobile menu */}
           <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-full left-0 right-0 bg-[#0E113580] z-50`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="/about-us" className="block px-3 py-2 hover:text-gray-300">About
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">About
 us</a>
-              <a href="/use-cases" className="block px-3 py-2 hover:text-gray-300">Use Cases</a>
-              <a href="/events" className="block px-3 py-2 hover:text-gray-300">Events</a>
-              <a href="/web-app" className="block px-3 py-2 hover:text-gray-300">Web App</a>
-              <a href="/faq" className="block px-3 py-2 hover:text-gray-300">FAQ</a>
-              <a href="/contact-us" className="block px-3 py-2 hover:text-gray-300">Contact us</a>
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">Use Cases</a>
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">Events</a>
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">Web App</a>
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">FAQ</a>
+              <a href="#" className="block px-3 py-2 hover:text-gray-300">Contact us</a>
             </div>
           </div>
         </div>
