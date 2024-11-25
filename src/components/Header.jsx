@@ -78,9 +78,9 @@ const Navigation = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="/about-us" className="hover:text-gray-300">About us</a>
-            <a href="/use-cases" className="hover:text-gray-300">Use Cases</a>
-            <a href="/events" className="hover:text-gray-300">Events</a>
+            <a href="#" className="hover:text-gray-300">About us</a>
+            <a href="#" className="hover:text-gray-300">Use Cases</a>
+            <a href="#" className="hover:text-gray-300">Events</a>
           </div>
 
           {/* Logo */}
@@ -103,9 +103,9 @@ const Navigation = () => {
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="/web-app" className="hover:text-gray-300">Web App</a>
-            <a href="/faq" className="hover:text-gray-300">FAQ</a>
-            <a href="/contact-us" className="hover:text-gray-300">Contact us</a>
+            <a href="#" className="hover:text-gray-300">Web App</a>
+            <a href="#" className="hover:text-gray-300">FAQ</a>
+            <a href="#" className="hover:text-gray-300">Contact us</a>
           </div>
 
           {/* Mobile menu */}
