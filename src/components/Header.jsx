@@ -27,9 +27,9 @@ const TopBar = () => {
           </div>
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
-              <a href="/login" className="hover:text-gray-300">Login</a>
+              <a href="#" className="hover:text-gray-300">Login</a>
               <span>/</span>
-              <a href="/register" className="hover:text-gray-300">Register</a>
+              <a href="#" className="hover:text-gray-300">Register</a>
             </div>
             <div className="flex items-center gap-4">
               <a href="https://facebook.com" className="hover:text-gray-300">
