@@ -33,6 +33,9 @@ const Card = () => {
             </div>
           </div>
         </div>
+        
+
+        
 
         <div className="grid font-montserrat font-medium grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <FeatureCard
@@ -91,4 +94,3 @@ const Card = () => {
 }
 
 export default Card
-
