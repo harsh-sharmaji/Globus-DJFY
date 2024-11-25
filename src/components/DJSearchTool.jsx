@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const EventCard = ({ date, name, location, imageUrl }) => (
-  <div className="relative w-full max-w-[300px] h-[200px] rounded-lg overflow-hidden flex-shrink-0">
+  <div className="relative w-full max-w-[300px] h-[200px] rounded-lg overflow-hidden flex-shrink-0 transition-transform duration-300">
     <img
       src={imageUrl}
       alt={name}
@@ -16,10 +16,45 @@ const EventCard = ({ date, name, location, imageUrl }) => (
 );
 
 const DJSearchTool = () => {
+  const events = [
+    {
+      date: "21 Jun 23",
+      name: "DJ Ocean & Thunder",
+      location: "Indira Nagar Bengaluru, India",
+      imageUrl: "/assets/g4.png"
+    },
+    {
+      date: "22 Jun 23",
+      name: "DJ SLING",
+      location: "Koramangla Bengaluru, India",
+      imageUrl: "/assets/u2.png"
+    },
+    {
+      date: "24 Jun 23",
+      name: "DJ Deep Bhamra",
+      location: "Padmavathi Bangalore, India",
+      imageUrl: "/assets/u3.png"
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === events.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? events.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div className="usage-video relative bg-custom-bg1 bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-white">
       <div className="absolute inset-0 bg-[#0A0D2C] bg-opacity-80"></div>
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-lg">
           <h1
             className="text-3xl md:text-4xl text-center text-white mb-6 md:mb-8 tracking-wide font-eater font-normal"
@@ -48,7 +83,10 @@ const DJSearchTool = () => {
         </div>
 
         <div className="mt-8 md:mt-12 flex justify-between items-center space-x-4">
-          <button className="text-white hidden md:block">
+          <button 
+            className="text-white hidden md:block hover:text-yellow-400 transition-colors"
+            onClick={prevSlide}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -62,28 +100,27 @@ const DJSearchTool = () => {
             </svg>
           </button>
 
-          <div className="flex space-x-4 overflow-x-auto">
-            <EventCard
-              date="21 Jun 23"
-              name="DJ Ocean & Thunder"
-              location="Indira Nagar Bengaluru, India"
-              imageUrl="/assets/g4.png"
-            />
-            <EventCard
-              date="22 Jun 23"
-              name="DJ SLING"
-              location="Koramangla Bengaluru, India"
-              imageUrl="/assets/g4.png"
-            />
-            <EventCard
-              date="24 Jun 23"
-              name="DJ Deep Bhamra"
-              location="Padmavathi Bangalore, India"
-              imageUrl="/assets/g4.png"
-            />
+          <div className="flex space-x-4 overflow-hidden">
+            <div 
+              className="flex transition-transform duration-300 ease-in-out space-x-4"
+              style={{ transform: `translateX(-${currentIndex * (300 + 16)}px)` }}
+            >
+              {events.map((event, index) => (
+                <EventCard
+                  key={index}
+                  date={event.date}
+                  name={event.name}
+                  location={event.location}
+                  imageUrl={event.imageUrl}
+                />
+              ))}
+            </div>
           </div>
 
-          <button className="text-white hidden md:block">
+          <button 
+            className="text-white hidden md:block hover:text-yellow-400 transition-colors"
+            onClick={nextSlide}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -103,3 +140,4 @@ const DJSearchTool = () => {
 };
 
 export default DJSearchTool;
+

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const StarIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
@@ -30,6 +32,7 @@ const Testimonials = () => {
         <p className="text-gray-300 max-w-3xl mx-auto mb-12">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
+        
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -99,9 +102,21 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {[...Array(5)].map((_, i) => (
+            <button
+              key={i}
+              className={`w-2 h-2 rounded-full ${i === 2 ? 'bg-yellow-500' : 'bg-gray-500'}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Testimonials;
+

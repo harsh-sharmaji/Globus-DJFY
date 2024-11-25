@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 
 const TopBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   return (
     <div className="bg-[#09173C] text-[#BCBCBC] py-2 text-sm font-comfortaa font-medium">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-          <div className="flex flex-col md:flex-row md:items-center md:gap-6">
-            <a href="https://wa.me/0012345678990" className="flex items-center gap-2 hover:text-gray-300 mb-2 md:mb-0">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-6">
+            <a href="https://wa.me/0012345678990" className="flex items-center gap-2 hover:text-gray-300">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
               </svg>
               <span className="hidden md:inline">WhatsApp Support</span>
             </a>
-            <a href="mailto:team@djfyapp.com" className="flex items-center gap-2 hover:text-gray-300 mb-2 md:mb-0">
+            <a href="mailto:team@djfyapp.com" className="flex items-center gap-2 hover:text-gray-300">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
@@ -27,8 +25,8 @@ const TopBar = () => {
               <span className="hidden md:inline">+001 2345 6789 90</span>
             </a>
           </div>
-          <div className="flex flex-col md:flex-row md:items-center md:gap-8 mt-4 md:mt-0">
-            <div className="flex items-center gap-2 mb-2 md:mb-0">
+          <div className="flex items-center gap-8">
+            <div className="flex items-center gap-2">
               <a href="/login" className="hover:text-gray-300">Login</a>
               <span>/</span>
               <a href="/register" className="hover:text-gray-300">Register</a>
@@ -69,36 +67,25 @@ const Navigation = () => {
     <nav className="relative bg-[#0E113580] text-white border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            {/* Mobile Logo */}
-            <div className="md:hidden">
-              <img
-                src="/assets/logo.png"
-                alt="DJFY Logo"
-                className="w-12 h-12"
-              />
-            </div>
-            {/* Mobile Menu Button */}
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="ml-2 md:hidden text-white focus:outline-none">
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
           </div>
-          <div className={`md:flex items-center gap-8 ${isMenuOpen ? 'block absolute top-full left-0 right-0 bg-[#0E113580] p-4' : 'hidden'}`}>
-            <a href="/about-us" className="block py-2 hover:text-gray-300">About us</a>
-            <a href="/use-cases" className="block py-2 hover:text-gray-300">Use Cases</a>
-            <a href="/events" className="block py-2 hover:text-gray-300">Events</a>
-            <a href="/web-app" className="block py-2 hover:text-gray-300">Web App</a>
-            <a href="/faq" className="block py-2 hover:text-gray-300">FAQ</a>
-            <a href="/contact-us" className="block py-2 hover:text-gray-300">Contact us</a>
+
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="hover:text-gray-300">About us</a>
+            <a href="#" className="hover:text-gray-300">Use Cases</a>
+            <a href="#" className="hover:text-gray-300">Events</a>
           </div>
 
-          {/* Desktop Logo */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2" style={{
-            top:"-2px"
-          }}>
-            <div className="relative w-[200px] h-[94px] flex items-center justify-center">
+          {/* Logo */}
+          <div className="absolute left-1/2 -translate-x-1/2" style={{ top: "-2px" }}>
+            <div className="relative w-[280px] h-[132px] flex items-center justify-center">
               <div className="absolute inset-0">
                 <img
                   src="/assets/Vector.png"
@@ -109,8 +96,28 @@ const Navigation = () => {
               <img
                 src="/assets/logo.png"
                 alt="DJFY Logo"
-                className="relative w-[69px] h-[73px] z-10"
+                className="relative w-[97px] h-[102px] z-10"
               />
+            </div>
+          </div>
+
+          {/* Desktop navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#" className="hover:text-gray-300">Web App</a>
+            <a href="#" className="hover:text-gray-300">FAQ</a>
+            <a href="#" className="hover:text-gray-300">Contact us</a>
+          </div>
+
+          {/* Mobile menu */}
+          <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute top-full left-0 right-0 bg-[#0E113580] z-50`}>
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <a href="/about-us" className="block px-3 py-2 hover:text-gray-300">About
+us</a>
+              <a href="/use-cases" className="block px-3 py-2 hover:text-gray-300">Use Cases</a>
+              <a href="/events" className="block px-3 py-2 hover:text-gray-300">Events</a>
+              <a href="/web-app" className="block px-3 py-2 hover:text-gray-300">Web App</a>
+              <a href="/faq" className="block px-3 py-2 hover:text-gray-300">FAQ</a>
+              <a href="/contact-us" className="block px-3 py-2 hover:text-gray-300">Contact us</a>
             </div>
           </div>
         </div>
@@ -140,12 +147,12 @@ const Header = () => {
         <Navigation />
         
         {/* Content Section */}
-        <div className="max-w-7xl mx-auto px-4 pt-16 md:pt-32">
+        <div className="max-w-7xl mx-auto px-4 pt-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-montserrat font-medium text-white flex items-center gap-4">
+                <h1 className="text-4xl md:text-5xl font-montserrat font-medium text-white flex items-center gap-4">
                   ABOUT <span className="text-[#FF4444]">DJFY</span>
                 </h1>
                 {/* Red Dots */}
@@ -157,20 +164,20 @@ const Header = () => {
               </div>
               
               <div className="space-y-6 text-gray-200">
-                <p className="text-sm md:text-base lg:text-lg font-montserrat font-normal leading-relaxed">
+                <p className="text-base md:text-lg font-montserrat font-normal leading-relaxed">
                   Introducing DJFY, the ultimate platform revolutionizing the music industry by offering a seamless alternative stream of income for DJs, live musicians/bands, and street performers/musicians. With DJFY, every artist and venue owner can easily create a free account and receive a unique QR code to share with their audience, unlocking the power of interactive music experiences like never before.
                 </p>
-                <p className="text-sm md:text-base lg:text-lg font-montserrat font-normal leading-relaxed">
+                <p className="text-base md:text-lg font-montserrat font-normal leading-relaxed">
                   With DJFY, artists and venues can tap into a new revenue stream while providing an immersive and interactive music experience for their audience. Join DJFY today and unlock the potential of your performances like never before!
                 </p>
               </div>
             </div>
             
             {/* Right Photos */}
-            <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
+            <div className="relative h-[500px] hidden lg:block">
               {/* First Photo */}
-              <div className="absolute right-0 top-16 md:top-32">
-                <div className="relative w-[250px] md:w-[350px] lg:w-[450px] h-[200px] md:h-[250px] lg:h-[300px] rounded-2xl">
+              <div className="absolute right-0 top-32">
+                <div className="relative w-[450px] h-[300px] rounded-2xl">
                   <img 
                     src="/assets/bg3.jpeg" 
                     alt="Party scene" 
@@ -182,8 +189,8 @@ const Header = () => {
               </div>
               
               {/* Second Photo */}
-              <div className="absolute right-8 md:right-12 top-8 md:top-12 ">
-                <div className="relative w-[250px] md:w-[350px] lg:w-[450px] h-[200px] md:h-[250px] lg:h-[300px]">
+              <div className="absolute right-12 top-12 ">
+                <div className="relative w-[450px] h-[300px]">
                   <img 
                     src="/assets/bg2.png" 
                     alt="Party scene" 

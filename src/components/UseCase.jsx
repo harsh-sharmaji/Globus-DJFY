@@ -24,7 +24,7 @@ const UseCase = () => {
     {
       title: "BAR/CLUB/VENUE DJ",
       description: "In bars and clubs, our app empowers guests to influence the music and create an interactive atmosphere. Instead of shouting requests or songs from spotify or youtube library, while DJs curate a playlist that keeps the dance floor packed. It's a seamless experience that enhances the entertainment value.",
-      imageUrl: "https://images.pexels.com/photos/7715613/pexels-photo-7715613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      imageUrl: "/assets/us1.jpeg"
     },
     {
       title: "MUSICIANS / BANDS",
@@ -49,8 +49,8 @@ const UseCase = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#09173C] py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-[#09173C] bg-cover py-20 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-montserrat font-medium ">
             <span className="text-white">USE </span>
